@@ -122,6 +122,7 @@ import Fonts from "./Fonts.astro"
         justify-content: flex-end;
     }
 
+    /* 当页面宽度小于850px时，将页面导航更改为侧边栏菜单 */
     @media (max-width: 850px) {
         .nav {
             position: absolute;
@@ -177,6 +178,7 @@ import Fonts from "./Fonts.astro"
         }
     }
 
+    /* 当页面宽度小于512px时，将大页面logo替换为小logo */
     @media (max-width: 512px) {
         .logo {
             display: none;
