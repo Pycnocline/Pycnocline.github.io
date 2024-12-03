@@ -1,5 +1,7 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
 
-// https://astro.build/config
-export default defineConfig({});
+// 页面设置
+export default defineConfig({
+    site: 'https://iamin.icu',    // 配置自定义域名
+});
