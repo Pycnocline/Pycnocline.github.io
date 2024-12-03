@@ -46,7 +46,7 @@ import Fonts from "./Fonts.astro"
 
     /* 导航栏整体设置 */
     header {
-        position: fixed; /* 设置导航栏不随页面滚动 */
+        position: absolute; /* 设置导航栏不随页面滚动 */
         left: 0;
         top: 0;
         display: flex;
@@ -126,7 +126,7 @@ import Fonts from "./Fonts.astro"
     /* 当页面宽度小于850px时，将页面导航更改为侧边栏菜单 */
     @media (max-width: 850px) {
         .nav {
-            position: fixed;
+            position: fixed;    /* 让侧边栏不随页面滚动 */
             left: -100%;
             top: 0;
             display: flex;
@@ -163,6 +163,7 @@ import Fonts from "./Fonts.astro"
             display: none;
         }
         #check:checked~.nav {
+            position: fixed;
             left: 0%;
         }
         .close-menu {
