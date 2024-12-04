@@ -4,3 +4,70 @@ import Fonts from "./Fonts.astro"
 <head>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
+
+<body>
+    <!-- 顶部导航栏 -->
+    <header>
+        <nav class="navleft">
+            <!-- 隐藏的侧边栏检测勾选框 -->
+            <input type="checkbox" name="sidenavcheck" id="sidenavcheck">
+
+            <!-- 导航栏顶部最左侧Logo,点击后返回主页 -->
+            <a href="/" class="logo">
+                <img src="./../../public/favicon.svg" />
+            </a>
+        </nav>
+        <nav class="navright">
+            <!-- 导航选项 -->
+            <a href="/">回到首页</a>
+            <a href="/">服务列表</a>
+            <a href="/blogs/">个人博客</a>
+            <a href="/">友情链接</a>
+        </nav>
+
+        
+        
+    </header>
+
+    <style>
+        /* 设置顶部导航栏参数 */
+        header {
+            /* 顶部导航栏左上角对齐 */
+            top: 0;
+            left: 0;
+            /* 顶部导航栏宽高 */
+            width: 100%;
+            height: 65px;
+            /* 去除间隔 */
+            padding: 0;
+            margin: 0;
+            /* 导航栏显示方式 */
+            position: fixed;
+            display: flex;
+            /* 顶部导航栏对齐方式 */
+            justify-content: space-around;  /* 水平 */
+            align-items: center;    /* 垂直 */
+            /* 顶部导航栏背景颜色 */
+            background: rgba(1, 4, 9, 0);
+             
+
+        }
+
+        /* logo，导航，功能性按钮设置 */
+        /* logo图片参数 */
+        .logo img {
+            /*logo宽高 */
+            width: 32px;
+            height: 32px;
+        }
+        .navleft {
+            /* 顶部导航栏对齐方式 */
+            justify-content: flex-start;  /* 水平 */
+        }
+        /* 侧边栏检测勾选框 */
+        .navleft input {
+            /* 显示方式 */
+            display: none;
+        }
+    </style>
+</body>
