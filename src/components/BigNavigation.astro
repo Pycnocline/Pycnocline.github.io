@@ -14,20 +14,26 @@ import Fonts from "./Fonts.astro"
 
             <!-- 导航栏顶部最左侧Logo,点击后返回主页 -->
             <a href="/" class="logo">
-                <img src="./../../public/favicon.svg" />
+                <img src="/favicon.svg" / alt="无限折腾">
             </a>
+
+            <!-- 导航选项 -->
+            <div class="navoption">
+                <a href="/">回到首页</a>
+                <a href="/">服务列表</a>
+                <a href="/blogs/">个人博客</a>
+                <a href="/">友情链接</a>
+            </div>
         </nav>
         <nav class="navright">
-            <!-- 导航选项 -->
-            <a href="/">回到首页</a>
-            <a href="/">服务列表</a>
-            <a href="/blogs/">个人博客</a>
-            <a href="/">友情链接</a>
+            
         </nav>
 
         
         
     </header>
+
+    <Fonts />
 
     <style>
         /* 设置顶部导航栏参数 */
@@ -37,7 +43,7 @@ import Fonts from "./Fonts.astro"
             left: 0;
             /* 顶部导航栏宽高 */
             width: 100%;
-            height: 65px;
+            height: 70px;
             /* 去除间隔 */
             padding: 0;
             margin: 0;
@@ -45,29 +51,58 @@ import Fonts from "./Fonts.astro"
             position: fixed;
             display: flex;
             /* 顶部导航栏对齐方式 */
-            justify-content: space-around;  /* 水平 */
+            justify-content: space-between;  /* 水平 */
             align-items: center;    /* 垂直 */
             /* 顶部导航栏背景颜色 */
-            background: rgba(1, 4, 9, 0);
-             
-
+            background: rgba(1, 4, 9, 0.5);
         }
 
-        /* logo，导航，功能性按钮设置 */
+        /* logo，导航设置 */
+        /* logo参数设置 */
+        .logo {
+            /* 间隔 */
+            margin-left: 24px;
+            margin-right: 24px;
+        }
         /* logo图片参数 */
         .logo img {
             /*logo宽高 */
             width: 32px;
             height: 32px;
+
         }
         .navleft {
+            /* 显示方式 */
+            display: flex;
             /* 顶部导航栏对齐方式 */
             justify-content: flex-start;  /* 水平 */
+            align-items: center;    /* 垂直 */
         }
         /* 侧边栏检测勾选框 */
         .navleft input {
             /* 显示方式 */
             display: none;
         }
+        /* 导航选项 */
+        .navoption {
+            /* 顶部导航栏对齐方式 */
+            justify-content: flex-start;  /* 水平 */
+            align-items: center;    /* 垂直 */
+            /* 文字装饰 */
+            text-decoration: none;
+        }
+        /* 导航选项内容 */
+        .navoption a {
+            /* 文字装饰 */
+            text-decoration: none;
+            /* 间隔 */
+            margin-right: 24px;
+            /* 过渡 */
+            transition: 300ms;
+        }
+        .navoption a:hover {
+            color: rgb(194, 195, 197);
+        }
+
     </style>
 </body>
